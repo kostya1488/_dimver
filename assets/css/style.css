@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Oswald:wght@200;300;400;500;600&display=swap");
+* {
+  box-sizing: border-box; }
+
+.body {
+  font-family: 'Montserrat', sans-serif;
+  color: #4c4d4f;
+  font-size: 14px;
+  line-height: 29px;
+  font-weight: 400; }
+  .body a,
+  .body a:hover {
+    text-decoration: none; }
+  .body ul {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .body .section_title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 300;
+    color: #222;
+    letter-spacing: .3em;
+    text-transform: uppercase; }
+  .body .container-fullwidth {
+    max-width: 1620px; }
+  .body .text-wide {
+    letter-spacing: .3em; }
+
+section {
+  padding-top: 100px;
+  overflow-x: hidden; }
+
+.section_header .logo {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: .1em;
+  color: #222; }
+
+.section_header .menu .nav_link {
+  position: relative;
+  display: inline-block;
+  color: #222;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 26px;
+  letter-spacing: .3em;
+  padding: 52px 2px 48px 8px; }
+  .section_header .menu .nav_link::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    margin-left: 50%;
+    height: 0px;
+    background: #222;
+    transition: .3s; }
+  .section_header .menu .nav_link:hover::before {
+    margin-left: 0;
+    height: 3px;
+    width: 100%; }
+
+.section_header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+  background: #fff;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1); }
+  .section_header.sticky .nav_link {
+    padding: 22px 2px 22px 8px; }
+
+.section_coursel {
+  padding: 0; }
+  .section_coursel .carousel-control-next-icon {
+    background: url(../img/svg/next.svg) no-repeat 0 0; }
+  .section_coursel .carousel-control-prev-icon {
+    background: url(../img/svg/prev.svg) no-repeat 0 0; }
+  .section_coursel .carousel-control-next-icon,
+  .section_coursel .carousel-control-prev-icon {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 40px; }
+  .section_coursel .carousel-caption {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #222;
+    text-align: center; }
+  .section_coursel .slide_subtitle {
+    font-size: 24px;
+    line-height: 29px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #222;
+    font-style: normal;
+    letter-spacing: .5em; }
+  .section_coursel .slide_title {
+    font-size: 60px;
+    line-height: 60px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: #222;
+    font-style: normal;
+    letter-spacing: .3em; }
+
+.section_about .about_wrap {
+  position: relative;
+  height: 530px; }
+  .section_about .about_wrap .image_wrap {
+    position: absolute;
+    height: 100%;
+    width: 45%; }
+    .section_about .about_wrap .image_wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+
+.section_about .section_title {
+  letter-spacing: .1em; }
+
+.section_about .right_num {
+  position: relative; }
+  .section_about .right_num::before {
+    content: '';
+    border-left: 1px solid #e5e5e5;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    bottom: 20%; }
+
+.section_services {
+  padding-bottom: 23px; }
+  .section_services .section_title {
+    margin-bottom: 100px; }
+  .section_services .serv_item__icon img {
+    width: 60px; }
+
+.section_achievements .achievements_wrap {
+  position: relative;
+  height: 478px;
+  background: url(../img/achievements.jpg) no-repeat 0 20%;
+  background-size: 100%;
+  color: #fff;
+  text-align: center; }
+  .section_achievements .achievements_wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000008c;
+    z-index: 5; }
+  .section_achievements .achievements_wrap .achiev_item {
+    z-index: 10; }
+  .section_achievements .achievements_wrap .achiev_icon img {
+    width: 64px; }
+  .section_achievements .achievements_wrap .section_title {
+    color: #fff;
+    letter-spacing: .1em; }
+
+.section_quotes .quotes_wrap {
+  position: relative;
+  background: url(../img/quote.jpg) no-repeat 0 0;
+  background-size: cover;
+  height: 576px; }
+  .section_quotes .quotes_wrap::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0000008c;
+    z-index: 5; }
+
+.section_quotes #carouselExampleControls2 {
+  position: relative;
+  z-index: 10; }
+
+.section_quotes .carousel-item {
+  color: #fff;
+  font-size: 14px; }
+  .section_quotes .carousel-item .quote_symbol {
+    font-family: 'Oswald', sans-serif;
+    font-size: 200px;
+    line-height: 200px; }
+  .section_quotes .carousel-item .quote_autor {
+    font-size: 24px;
+    line-height: 32px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    letter-spacing: .3em; }
+
+.section_quotes .carousel-control-next-icon {
+  background: url(../img/svg/next_white.svg) no-repeat 0 0; }
+
+.section_quotes .carousel-control-prev-icon {
+  background: url(../img/svg/prev_white.svg) no-repeat 0 0; }
+
+.section_quotes .carousel-control-next-icon,
+.section_quotes .carousel-control-prev-icon {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 40px; }
+
+.section_feedback {
+  margin-bottom: 100px; }
+  .section_feedback textarea,
+  .section_feedback input {
+    display: block;
+    height: 38px;
+    border: 0 solid #edeef0;
+    border-bottom: 1px solid #edeef0;
+    color: #222;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 29px;
+    padding: 4.5px 0;
+    outline: none;
+    margin-bottom: 43px;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    transition: .5s; }
+    .section_feedback textarea:focus,
+    .section_feedback input:focus {
+      border-color: #512da8; }
+  .section_feedback textarea {
+    overflow-wrap: break-word;
+    height: 99px;
+    resize: none; }
+  .section_feedback button {
+    background: #fff;
+    text-transform: uppercase;
+    color: #222;
+    border: 1px solid #222;
+    font-size: 10px;
+    line-height: 29px;
+    font-weight: 300;
+    letter-spacing: .3em;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-left: 30px;
+    padding-right: 30px;
+    transition: .3s;
+    outline: none; }
+    .section_feedback button:hover {
+      background: #000;
+      color: #fff; }
+
+.section_contacts img {
+  width: 20px; }
+
+.section_footer {
+  border-top: 1px solid #edeef0;
+  padding-bottom: 34px;
+  padding-top: 53px; }
+  .section_footer .messengers img {
+    width: 20px; }
