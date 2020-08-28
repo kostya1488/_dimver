@@ -133,9 +133,22 @@ section {
         }
         .menu {
             position: absolute;
-            // background: #fff;
+            margin-top: 50%;
+            right: 0;
             z-index: 100;
             padding: 20px;
+            text-align: right;
+            li::after {
+                content: "•";
+                position: relative;
+                top: 2px;
+                font-size: 30px;
+                margin-left: 5px;
+            }
+            .nav_link {
+                font-size: 16px;
+                line-height: 45px;
+            }
         }
     }
 }
@@ -192,6 +205,11 @@ section {
             line-height: 60px;
         }
     }
+    @media (min-width: $screen_md_max) {
+        .banner_wrap {
+            min-height: 100vh;
+        }
+    }
     @media (max-width: $screen_lg_max) {
         .carousel-caption {
             top: 15px;
@@ -205,16 +223,16 @@ section {
         .banner_wrap {
             background: url(../img/banner_mob.jpg) no-repeat 50% 100%;
             background-size: cover;
-            min-height: 100vh;
+        }
+    }
+    @media (max-width: $screen_xs_max) {
+        .banner_wrap {
+            min-height: 93vh;
         }
     }
 }
 
 // === / section_coursel
-// --- section_intro
-.section_intro {}
-
-// === / section_intro
 // --- section_about
 .section_about {
     .about_wrap {
@@ -311,7 +329,6 @@ section {
         position: relative;
         background: url(../img/quote.jpg) no-repeat 50% 0;
         background-size: cover;
-        height: 576px;
         &::after {
             content: "";
             position: absolute;
@@ -331,12 +348,8 @@ section {
         color: #fff;
         .quote_symbol {
             font-family: 'Oswald', sans-serif;
-            font-size: 200px;
-            line-height: 160px;
         }
         .quote_autor {
-            font-size: 24px;
-            line-height: 32px;
             font-family: 'Oswald', sans-serif;
             font-weight: 500;
             letter-spacing: .3em;
@@ -356,8 +369,19 @@ section {
         height: 40px;
     }
     @media (min-width: $screen_sm) {
+        .quotes_wrap {
+            min-height: 576px;
+        }
         .carousel-item {
             font-size: 14px;
+        }
+        .quote_autor {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        .quote_symbol {
+            font-size: 200px;
+            line-height: 160px;
         }
     }
     @media (min-width: $screen_sm) and (max-width: $screen_md_max) {
@@ -365,8 +389,19 @@ section {
     }
     @media (max-width: $screen_xs_max) {
         padding-top: 0;
+        .quotes_wrap {
+            min-height: 340px;
+        }
         .carousel-item {
             font-size: 11px;
+        }
+        .quote_autor {
+            font-size: 14px;
+            line-height: 20px;
+        }
+        .quote_symbol {
+            font-size: 88px;
+            line-height: 77px;
         }
     }
 }
@@ -374,7 +409,6 @@ section {
 // === / section_quotes
 // --- section_feedback
 .section_feedback {
-    margin-bottom: 100px;
     textarea,
     input {
         display: block;
@@ -405,7 +439,6 @@ section {
         text-transform: uppercase;
         color: #222;
         border: 1px solid #222;
-        font-size: 10px;
         line-height: 29px;
         font-weight: 300;
         letter-spacing: .3em;
@@ -418,6 +451,20 @@ section {
         &:hover {
             background: #000;
             color: #fff;
+        }
+    }
+    @media (min-width: $screen_sm) {
+        margin-bottom: 100px;
+        textarea,
+        input {
+            font-size: 14px;
+        }
+    }
+    @media (max-width: $screen_xs_max) {
+        margin-bottom: 50px;
+        textarea,
+        input {
+            font-size: 10px;
         }
     }
 }
