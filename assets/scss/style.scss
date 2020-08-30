@@ -23,6 +23,7 @@ $screen_xl: 1200px;
     font-weight: 400;
     a,
     a:hover {
+        color: #222;
         text-decoration: none;
     }
     ul {
@@ -328,6 +329,9 @@ section {
                 min-height: 600px;
             }
         }
+        .achiev_subtitle {
+            font-size: 10px;
+        }
         .achiev_icon img {
             width: 44px;
         }
@@ -406,8 +410,9 @@ section {
     }
     @media (max-width: $screen_xs_max) {
         padding-top: 0;
-        .quotes_wrap {
-            min-height: 340px;
+        .carousel_wrap {
+            padding-top: 100px;
+            min-height: 400px;
         }
         .carousel-item {
             font-size: 11px;

@@ -11,6 +11,7 @@
   font-weight: 400; }
   .body a,
   .body a:hover {
+    color: #222;
     text-decoration: none; }
   .body ul {
     margin: 0;
@@ -231,6 +232,8 @@ section {
       background-size: cover; }
       .section_achievements .achievements_wrap .achievements_inner {
         min-height: 600px; }
+    .section_achievements .achiev_subtitle {
+      font-size: 10px; }
     .section_achievements .achiev_icon img {
       width: 44px; } }
 
@@ -297,8 +300,9 @@ section {
 @media (max-width: 575px) {
   .section_quotes {
     padding-top: 0; }
-    .section_quotes .quotes_wrap {
-      min-height: 340px; }
+    .section_quotes .carousel_wrap {
+      padding-top: 100px;
+      min-height: 400px; }
     .section_quotes .carousel-item {
       font-size: 11px; }
     .section_quotes .quote_autor {

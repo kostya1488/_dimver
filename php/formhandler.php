@@ -1,5 +1,5 @@
 <?php
-$to = "matvienkoigor956@gmail.com";
+$to = "info@dimver.net.ua";
 $subject = "Заявка с сайта";
 $headers = "From: message@dimver.net.ua";
 
