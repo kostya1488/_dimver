@@ -208,11 +208,11 @@ section {
     }
     @media (min-width: $screen_xl) {
         .carousel-content {
-            top: 140px;
+            top: 120px;
         }
         .slide_title {
-            font-size: 60px;
-            line-height: 80px;
+            font-size: 48px;
+            line-height: 64px;
         }
     }
     // @media (min-width: $screen_md_max) {
@@ -456,7 +456,7 @@ section {
         height: 99px;
         resize: none;
     }
-    input[type=button] {
+    input[type=submit] {
         display: inline-block;
         background: #fff;
         text-transform: uppercase;

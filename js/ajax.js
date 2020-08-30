@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("#btn").click(
+    $("#ajax_form").submit(
         function() {
             sendAjaxForm('ajax_form', 'php/formhandler.php');
             return false;

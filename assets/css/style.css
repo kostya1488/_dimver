@@ -156,10 +156,10 @@ section {
     letter-spacing: .3em; }
   @media (min-width: 1200px) {
     .section_banner .carousel-content {
-      top: 140px; }
+      top: 120px; }
     .section_banner .slide_title {
-      font-size: 60px;
-      line-height: 80px; } }
+      font-size: 48px;
+      line-height: 64px; } }
   @media (max-width: 1199px) {
     .section_banner .carousel-content {
       top: 15px; }
@@ -336,7 +336,7 @@ section {
   height: 99px;
   resize: none; }
 
-.section_feedback input[type=button] {
+.section_feedback input[type=submit] {
   display: inline-block;
   background: #fff;
   text-transform: uppercase;
@@ -351,7 +351,7 @@ section {
   padding-right: 30px;
   transition: .3s;
   outline: none; }
-  .section_feedback input[type=button]:hover {
+  .section_feedback input[type=submit]:hover {
     background: #000;
     color: #fff; }
 
