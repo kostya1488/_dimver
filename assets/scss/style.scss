@@ -157,6 +157,15 @@ section {
 // --- section_coursel
 .section_banner {
     padding: 0;
+    .carousel-item {
+        position: relative;
+        max-height: 730px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
     .carousel-control-next-icon {
         background: url(../img/svg/next.svg) no-repeat 100% 0;
     }
@@ -170,7 +179,7 @@ section {
         width: 36px;
         height: 40px;
     }
-    .carousel-caption {
+    .carousel-content {
         position: absolute;
         left: 0;
         width: 100%;
@@ -197,21 +206,21 @@ section {
         letter-spacing: .3em;
     }
     @media (min-width: $screen_xl) {
-        .carousel-caption {
-            top: 150px;
+        .carousel-content {
+            top: 140px;
         }
         .slide_title {
             font-size: 60px;
-            line-height: 60px;
+            line-height: 80px;
         }
     }
-    @media (min-width: $screen_md_max) {
-        .banner_wrap {
-            min-height: 100vh;
-        }
-    }
+    // @media (min-width: $screen_md_max) {
+    //     .banner_wrap {
+    //         min-height: 100vh;
+    //     }
+    // }
     @media (max-width: $screen_lg_max) {
-        .carousel-caption {
+        .carousel-content {
             top: 15px;
         }
         .slide_title {
@@ -290,7 +299,7 @@ section {
 .section_achievements {
     .achievements_wrap {
         position: relative;
-        background: url(../img/achievements.jpg) no-repeat 50% 44%;
+        background: url(../img/achievements.jpg) no-repeat 50% 50%;
         min-height: 570px;
         background-size: cover;
         color: #fff;
@@ -303,7 +312,7 @@ section {
             letter-spacing: .1em;
         }
     }
-    @media (max-width: $screen_xs_max) {
+    @media (min-width: $screen_sm) {
         .achiev_icon img {
             width: 64px;
         }
@@ -312,9 +321,12 @@ section {
         padding-top: 0;
         .achievements_wrap {
             position: relative;
-            background: url(../img/achievements.jpg) no-repeat 64% 44%;
+            background: url(../img/achievements.jpg) no-repeat 33% 44%;
             background-size: cover;
-            min-height: 600px;
+            // min-height: 600px;
+            .achievements_inner {
+                min-height: 600px;
+            }
         }
         .achiev_icon img {
             width: 44px;
@@ -369,11 +381,16 @@ section {
         height: 40px;
     }
     @media (min-width: $screen_sm) {
-        .quotes_wrap {
-            min-height: 576px;
+        .carousel_wrap {
+            padding-top: 150px;
+            min-height: 610px;
         }
         .carousel-item {
             font-size: 14px;
+        }
+        .quote_text {
+            font-size: 26px;
+            line-height: 42px;
         }
         .quote_autor {
             font-size: 24px;
@@ -423,7 +440,7 @@ section {
         outline: none;
         margin-bottom: 43px;
         letter-spacing: .3em;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         transition: .5s;
         &:focus {
             border-color: #512da8;
@@ -434,7 +451,8 @@ section {
         height: 99px;
         resize: none;
     }
-    button {
+    input[type=button] {
+        display: inline-block;
         background: #fff;
         text-transform: uppercase;
         color: #222;
