@@ -259,6 +259,17 @@ section {
             background-size: cover;
             min-height: 93vh;
         }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
         #menu_button {
             position: absolute;
             bottom: 50%;
@@ -267,6 +278,7 @@ section {
             margin-left: -30px;
             left: 50%;
             z-index: 150;
+            animation: bounce 3s ease-in-out infinite;
             transition: .6s ease-in-out;
             cursor: pointer;
             .button_item {
