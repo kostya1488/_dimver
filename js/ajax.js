@@ -15,12 +15,14 @@ function sendAjaxForm(ajax_form, url) {
         data: $("#" + ajax_form).serialize(), // Сеарилизуем объект
         success: function(response) { //Данные отправлены успешно
             result = $.parseJSON(response);
-            console.log(result);
-
+            $('#ajax_form').hide('slow');
+            $('#response').show();
         },
         error: function(response) { // Данные не отправлены
-            console.log(response);
-            console.log('Ошибка. Данные не отправлены.');
+            $('#ajax_form').hide('slow');
+            $('#response').html('Ошибка! <br> Данные не отправлены.').css('color', '#f44336')
+            $('#response').show();
+
         }
     });
 }

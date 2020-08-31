@@ -1,14 +1,19 @@
 $(window).scroll(() => {
     let header = $('#header');
 
-    if ($(window).scrollTop() > 30) {
+    if ($(window).scrollTop() > 30 && $(window).width() > 992) {
         header.addClass("sticky");
-        $('#coursel').css('margin-top', 126);
+        $('#banner').css('margin-top', 126);
 
     } else {
         header.removeClass("sticky");
-        $('#coursel').css('margin-top', 0);
+        $('#banner').css('margin-top', 0);
     }
+});
+
+
+$('#menu_button').click(() => {
+    $('.open_menu').toggleClass('active')
 });
 
 $(".nav_link").on("click", function(event) {
