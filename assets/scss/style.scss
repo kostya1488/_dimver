@@ -259,17 +259,6 @@ section {
             background-size: cover;
             min-height: 93vh;
         }
-        @keyframes bounce {
-            0% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(15px);
-            }
-            100% {
-                transform: translateY(0px);
-            }
-        }
         #menu_button {
             position: absolute;
             bottom: 50%;
@@ -281,6 +270,17 @@ section {
             animation: bounce 3s ease-in-out infinite;
             transition: .6s ease-in-out;
             cursor: pointer;
+            @keyframes bounce {
+                0% {
+                    transform: translateY(0px);
+                }
+                50% {
+                    transform: translateY(15px);
+                }
+                100% {
+                    transform: translateY(0px);
+                }
+            }
             .button_item {
                 position: absolute;
                 display: block;
@@ -402,8 +402,9 @@ section {
     .achievements_wrap {
         position: relative;
         background: url(../img/achievements.jpg) no-repeat 50% 50%;
-        min-height: 570px;
         background-size: cover;
+        background-attachment: fixed;
+        min-height: 570px;
         color: #fff;
         text-align: center;
         .achiev_item {
@@ -419,6 +420,11 @@ section {
             width: 64px;
         }
     }
+    @media (max-width: $screen_md_max) {
+        .achiev_subtitle {
+            font-size: 10px;
+        }
+    }
     @media (max-width: $screen_xs_max) {
         padding-top: 0;
         .achievements_wrap {
@@ -429,9 +435,6 @@ section {
             .achievements_inner {
                 min-height: 600px;
             }
-        }
-        .achiev_subtitle {
-            font-size: 10px;
         }
         .achiev_icon img {
             width: 44px;
@@ -446,6 +449,7 @@ section {
         position: relative;
         background: url(../img/quote.jpg) no-repeat 50% 0;
         background-size: cover;
+        background-attachment: fixed;
         &::after {
             content: "";
             position: absolute;

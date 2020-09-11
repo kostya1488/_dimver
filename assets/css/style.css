@@ -191,13 +191,6 @@ section {
       background: url(../img/banner_mob.jpg) no-repeat 50% 100%;
       background-size: cover;
       min-height: 93vh; }
-    @keyframes bounce {
-      0% {
-        transform: translateY(0px); }
-      50% {
-        transform: translateY(15px); }
-      100% {
-        transform: translateY(0px); } }
     .section_banner #menu_button {
       position: absolute;
       bottom: 50%;
@@ -209,6 +202,13 @@ section {
       animation: bounce 3s ease-in-out infinite;
       transition: .6s ease-in-out;
       cursor: pointer; }
+    @keyframes bounce {
+      0% {
+        transform: translateY(0px); }
+      50% {
+        transform: translateY(15px); }
+      100% {
+        transform: translateY(0px); } }
       .section_banner #menu_button .button_item {
         position: absolute;
         display: block;
@@ -289,8 +289,9 @@ section {
 .section_achievements .achievements_wrap {
   position: relative;
   background: url(../img/achievements.jpg) no-repeat 50% 50%;
-  min-height: 570px;
   background-size: cover;
+  background-attachment: fixed;
+  min-height: 570px;
   color: #fff;
   text-align: center; }
   .section_achievements .achievements_wrap .achiev_item {
@@ -303,6 +304,10 @@ section {
   .section_achievements .achiev_icon img {
     width: 64px; } }
 
+@media (max-width: 991px) {
+  .section_achievements .achiev_subtitle {
+    font-size: 10px; } }
+
 @media (max-width: 575px) {
   .section_achievements {
     padding-top: 0; }
@@ -312,15 +317,14 @@ section {
       background-size: cover; }
       .section_achievements .achievements_wrap .achievements_inner {
         min-height: 600px; }
-    .section_achievements .achiev_subtitle {
-      font-size: 10px; }
     .section_achievements .achiev_icon img {
       width: 44px; } }
 
 .section_quotes .quotes_wrap {
   position: relative;
   background: url(../img/quote.jpg) no-repeat 50% 0;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   .section_quotes .quotes_wrap::after {
     content: "";
     position: absolute;
